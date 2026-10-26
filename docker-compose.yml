@@ -1,0 +1,8 @@
+services:
+  cloudflared:
+    image: nikovsk1/cloudflared-ihost:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - TUNNEL_TOKEN=your_cloudflare_tunnel_token_here
